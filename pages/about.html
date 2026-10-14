@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Amuma is a frontend social media prototype inspired by care, privacy, and self-expression.">
+        <title>About Us | Amuma</title>
+        <link rel="icon" href="../assets/img/logo.png" type="image/png">
+        <link rel="stylesheet" href="../src/css/style.css">
+        <script src="../src/js/store.js" defer></script>
+        <script src="../src/js/main.js" defer></script>
+    </head>
+    <body data-page="about">
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="../index.html" aria-label="Amuma home">
+                    <img src="../assets/img/logo.png" alt="" class="brand-logo">
+                    <span>Amuma</span>
+                </a>
+                <nav aria-label="Main navigation">
+                    <a href="../index.html">Feed</a>
+                    <a href="../pages/profile.html">Profile</a>
+                    <a href="../pages/about.html" aria-current="page">About Us</a>
+                    <a href="../pages/login.html">Login</a>
+                    <a href="../pages/signup.html">Signup</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" class="main-content">
+            <section class="page-heading">
+                <span class="eyebrow">THE STORY BEHIND AMUMA</span>
+                <h1>Care belongs online, too.</h1>
+                <p>Your voice matters. Your privacy does too.</p>
+            </section>
+
+            <figure class="about-image">
+                <img src="../assets/img/community.png" alt="Illustration of a small group sharing a conversation">
+                <figcaption>Connection and community are at the heart of Amuma.</figcaption>
+            </figure>
+
+            <section class="card story-card">
+                <span class="eyebrow">A BISAYA NAME. A HUMAN PURPOSE.</span>
+                <h2>Amuma: care and nurture.</h2>
+                <p>Amuma takes inspiration from the Bisaya term associated with care and nurture. My concept cares for both people's voices and their personal boundaries.</p>
+                <p>The goal is to let people connect, share ideas, and express themselves freely while minimizing unnecessary collection of personal information.</p>
+                <blockquote>
+                    “Sa Amuma, importante ang imong tingog ug ang imong pribasiya.”
+                    <small>At Amuma, your voice and your privacy matter.</small>
+                </blockquote>
+            </section>
+
+            <div class="values-grid">
+                <section class="card">
+                    <h3>Respect privacy</h3>
+                    <p>Collect less and explain clearly where demo information goes.</p>
+                </section>
+                <section class="card">
+                    <h3>Make room for voices</h3>
+                    <p>Encourage self-expression while respecting other people's dignity.</p>
+                </section>
+                <section class="card">
+                    <h3>Nurture connection</h3>
+                    <p>Build around shared stories and caring communities.</p>
+                </section>
+            </div>
+
+            <section class="card">
+                <h2>How this prototype works</h2>
+                <p>Built with HTML, CSS, and Vanilla JavaScript only. There is no backend, database, or API. All images are bundled locally.</p>
+                <p>Fictional posts, likes, comments, and profile details are remembered in this browser when storage is available. Login and signup demonstrate form validation; passwords and emails are discarded.</p>
+                <p class="notice">This frontend cannot provide real authentication, encryption, access restrictions, or protection against copying and AI scraping. Use fictional information only.</p>
+                <h3 class="team-heading">MIDTERM EXAM</h3>
+                <p><strong>Created by:</strong> Jason Ray J. de Guia</p>
+                <p><strong>Course and section:</strong> BSDS 3B</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Amuma — Your voice matters. Your privacy does too.</p>
+            <small>Student frontend prototype. No real authentication.</small>
+        </footer>
+
+        <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+    </body>
+</html>

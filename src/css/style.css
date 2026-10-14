@@ -1,0 +1,722 @@
+/* Shared colors and spacing for the five required pages. */
+:root {
+    --accent: #6550a1;
+    --accent-soft: #f0ecf9;
+    --ink: #26382d;
+    --muted: #6b746d;
+    --background: #f7f8f4;
+    --surface: #ffffff;
+    --line: #e3e8df;
+    --green: #376b52;
+    --green-soft: #ecf3ea;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+p {
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid #8b76cd;
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -80px;
+    left: 12px;
+    z-index: 10;
+    padding: 10px 18px;
+    background: white;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+/* Header and supplied logo. */
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    max-width: 1180px;
+    margin: auto;
+    padding: 15px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    background: white;
+    border-radius: 12px;
+}
+
+.brand-dot {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+nav a {
+    padding: 8px 13px;
+    border-radius: 9px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Layout and reusable cards. */
+.main-content {
+    max-width: 1120px;
+    margin: 32px auto;
+    padding: 0 28px;
+    min-height: 65vh;
+}
+
+.page-heading {
+    margin: 0 0 28px;
+}
+
+.page-heading h1 {
+    margin: 10px 0;
+}
+
+.page-heading p, .muted {
+    color: var(--muted);
+}
+
+.eyebrow {
+    display: block;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.8px;
+}
+
+.card {
+    padding: 24px;
+    margin-bottom: 22px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+}
+
+.card p {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.feed-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(230px, 1fr);
+    gap: 26px;
+    align-items: start;
+}
+
+.feed-column {
+    min-width: 0;
+}
+
+.welcome-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 22px;
+    background: var(--green-soft);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.welcome-banner > div {
+    padding: 25px;
+}
+
+.welcome-banner h2 {
+    margin-top: 12px;
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.welcome-banner p {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--green);
+}
+
+.welcome-banner img {
+    width: 100%;
+    height: 235px;
+    object-fit: contain;
+    padding: 12px;
+    background: white;
+}
+
+.purpose-card h2 {
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.purpose-card > a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.notice {
+    background: var(--green-soft);
+    color: var(--green);
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 12px !important;
+}
+
+/* Forms and buttons. */
+label {
+    display: block;
+    margin: 16px 0 6px;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 11px 12px;
+    background: white;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.button:hover {
+    background: #514080;
+}
+
+form > .button {
+    margin-top: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.composer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 14px;
+}
+
+.composer-bottom small, .small-note {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* Feed cards and comments. */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.post-header strong {
+    display: block;
+    font-size: 13px;
+}
+
+.post-header small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.post-text {
+    white-space: pre-wrap;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    margin-top: 16px;
+    background: white;
+    border-radius: 12px;
+}
+
+.post-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 17px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+.post-action {
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.post-action:hover, .post-action[aria-pressed="true"] {
+    color: var(--accent);
+}
+
+.delete-action {
+    margin-left: auto;
+    color: #a73838;
+}
+
+.comments {
+    padding-top: 16px;
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--background);
+}
+
+.comment strong {
+    font-size: 11px;
+}
+
+.comment p {
+    margin-top: 4px;
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
+.comment-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-form .button {
+    margin: 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 35px;
+}
+
+/* Profile and About Us. */
+.profile-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.profile-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.profile-details {
+    position: relative;
+    padding: 57px 28px 25px;
+}
+
+.profile-avatar {
+    position: absolute;
+    top: -42px;
+    left: 28px;
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-details h1 {
+    margin: 8px 0;
+    font-size: 34px;
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(0, 1.8fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.section-title {
+    margin: 0 0 20px;
+}
+
+.about-image {
+    margin: 0 0 25px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+figcaption {
+    padding: 12px 22px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.story-card h2 {
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+blockquote {
+    margin: 20px 0 0;
+    padding: 20px;
+    background: var(--green-soft);
+    color: var(--green);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    border-left: 3px solid var(--green);
+}
+
+blockquote small {
+    display: block;
+    margin-top: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.team-heading {
+    margin-top: 24px;
+}
+
+/* Login and signup. */
+.account-main {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    max-width: 1080px;
+    margin: 42px auto;
+    padding: 0 28px;
+    min-height: 65vh;
+}
+
+.account-story h1 {
+    margin: 14px 0;
+}
+
+.account-story p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.account-story img {
+    width: 100%;
+    max-height: 310px;
+    object-fit: contain;
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    margin-top: 28px;
+}
+
+.account-card {
+    padding: 30px;
+}
+
+.account-card h2 {
+    margin-top: 10px;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.account-card > p {
+    font-size: 12px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 64px;
+}
+
+.password-field button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font-size: 11px;
+}
+
+.form-error {
+    color: #a73838;
+    font-size: 12px;
+}
+
+.form-error:empty {
+    display: none;
+}
+
+.account-switch {
+    margin-top: 20px !important;
+}
+
+.guest-link {
+    display: inline-block;
+    margin: 12px 0;
+    font-size: 12px;
+}
+
+/* Feedback and responsive behavior. */
+.site-footer {
+    max-width: 1120px;
+    margin: 20px auto;
+    padding: 20px 28px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    font-size: 11px;
+}
+
+.status-message {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90vw;
+    padding: 12px 20px;
+    background: var(--ink);
+    color: white;
+    border-radius: 12px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 13px;
+    z-index: 20;
+}
+
+.status-message.visible {
+    opacity: 1;
+}
+
+.storage-warning {
+    margin-bottom: 20px;
+    padding: 14px;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feed-layout, .profile-layout, .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .account-main {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+    }
+
+    .account-story {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content, .account-main {
+        padding: 0 16px;
+        margin-top: 24px;
+    }
+
+    .header-inner {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .profile-card {
+        padding: 0;
+    }
+
+    .welcome-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-banner img {
+        height: 200px;
+    }
+
+    .composer-bottom small {
+        max-width: 180px;
+    }
+
+    .profile-cover {
+        height: 160px;
+    }
+
+    .post-action {
+        font-size: 11px;
+    }
+
+}
+    .brand > span {
+        color: #3B0764;
+    }

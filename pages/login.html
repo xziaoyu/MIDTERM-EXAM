@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Amuma is a frontend social media prototype inspired by care, privacy, and self-expression.">
+        <title>Login | Amuma</title>
+        <link rel="icon" href="../assets/img/logo.png" type="image/png">
+        <link rel="stylesheet" href="../src/css/style.css">
+        <script src="../src/js/store.js" defer></script>
+        <script src="../src/js/main.js" defer></script>
+    </head>
+    <body data-page="login">
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="../index.html" aria-label="Amuma home">
+                    <img src="../assets/img/logo.png" alt="" class="brand-logo">
+                    <span>Amuma</span>
+                </a>
+                <nav aria-label="Main navigation">
+                    <a href="../index.html">Feed</a>
+                    <a href="../pages/profile.html">Profile</a>
+                    <a href="../pages/about.html">About Us</a>
+                    <a href="../pages/login.html" aria-current="page">Login</a>
+                    <a href="../pages/signup.html">Signup</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" class="account-main">
+            <section class="account-story">
+                <span class="eyebrow">CARE FOR YOUR VOICE</span>
+                <h1>A little more care.<br>A little less noise.</h1>
+                <p>A welcoming space for stories, ideas, and personal boundaries.</p>
+                <img src="../assets/img/community.png" alt="Illustration of people sharing a conversation">
+            </section>
+
+            <section class="card account-card">
+                <span class="eyebrow">MAKE YOURSELF AT HOME</span>
+                <h2>Welcome back</h2>
+                <p>Use any valid fictional email and a demo password of at least 8 characters.</p>
+                <form id="login-form">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required placeholder="Jason@gmail.com" autocomplete="off">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input id="password" type="password" minlength="8" required placeholder="At least 8 characters" autocomplete="off">
+                        <button type="button" id="toggle-password" aria-pressed="false">Show</button>
+                    </div>
+                    <p id="form-error" class="form-error" role="alert"></p>
+                    <button class="button full-width" type="submit">Enter Amuma</button>
+                </form>
+                <p class="account-switch">
+                    New here?
+                    <a href="signup.html">Signup</a>
+                </p>
+                <a href="../index.html" class="guest-link">Explore as a guest →</a>
+                <p class="notice">Demo only. No real account is created. Passwords and emails are not stored or sent.</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Amuma — Your voice matters. Your privacy does too.</p>
+            <small>Student frontend prototype. No real authentication.</small>
+        </footer>
+
+        <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+    </body>
+</html>

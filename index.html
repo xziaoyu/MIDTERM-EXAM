@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Amuma is a frontend social media prototype inspired by care, privacy, and self-expression.">
+        <title>Main feed | Amuma</title>
+        <link rel="icon" href="assets/img/logo.png" type="image/png">
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="src/js/store.js" defer></script>
+        <script src="src/js/main.js" defer></script>
+    </head>
+    <body data-page="feed">
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="brand" href="index.html" aria-label="Amuma home">
+                    <img src="assets/img/logo.png" alt="" class="brand-logo">
+                    <span>Amuma</span>
+                </a>
+                <nav aria-label="Main navigation">
+                    <a href="index.html" aria-current="page">Feed</a>
+                    <a href="pages/profile.html">Profile</a>
+                    <a href="pages/about.html">About Us</a>
+                    <a href="pages/login.html">Login</a>
+                    <a href="pages/signup.html">Signup</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" class="main-content">
+            <section class="page-heading">
+                <span class="eyebrow">MAAYONG ADLAW · GOOD DAY</span>
+                <h1>Your everyday circle.</h1>
+                <p>Connect, share ideas, and make room for your story.</p>
+            </section>
+
+            <div class="feed-layout">
+                <div class="feed-column">
+                    <section class="welcome-banner">
+                        <div>
+                            <span class="eyebrow">CONNECTION, WITH CARE</span>
+                            <h2>Your voice matters.<br>Your privacy does too.</h2>
+                            <p>Amuma means care or nurture. Let's bring a little of that online.</p>
+                        </div>
+                        <img src="assets/img/community.png" alt="Illustration of people connecting around a table">
+                    </section>
+
+                    <section class="card composer">
+                        <h2>Share a story</h2>
+                        <form id="post-form">
+                            <label for="post-text">What's on your mind?</label>
+                            <textarea id="post-text" maxlength="600" required placeholder="Unsay imong isturya?"></textarea>
+                            <div class="composer-bottom">
+                                <small>Up to 600 characters. Use fictional information.</small>
+                                <button type="submit" class="button">Share</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section aria-label="Community posts" id="post-list"></section>
+                </div>
+
+                <aside class="card purpose-card">
+                    <span class="eyebrow">THE AMUMA CONCEPT</span>
+                    <h2>A space that cares.</h2>
+                    <p>Connect with others while respecting personal boundaries.</p>
+                    <p>This prototype includes no trackers, ads, external image requests, or AI integrations.</p>
+                    <p class="notice">Demo activity stays in browser storage when available. This is not encrypted storage or a real private network.</p>
+                    <a href="pages/about.html">Read our story →</a>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>Amuma — Your voice matters. Your privacy does too.</p>
+            <small>Student frontend prototype. No real authentication.</small>
+        </footer>
+
+        <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+    </body>
+</html>
