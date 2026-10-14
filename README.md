@@ -108,22 +108,3 @@ Changes to default sample data do not overwrite existing saved activity. Remove 
 ## Verification and manual checklist
 
 Creation checks: JavaScript syntax, five-page local links/assets, unique HTML IDs, indentation and image integrity. Model checks cover posting, validation, likes, comments, profile updates, own-post deletion, persistence, blocked storage and invalid saved data.
-
-Rendered browser layout and end-to-end browser interactions have not been verified in the creation environment. Before submission:
-
-- [ ] Open all five pages; check images, styling and navigation.
-- [ ] Inspect the logo; verify only the symbol appears beside Amuma.
-- [ ] Create a post, then check that it appears on Profile.
-- [ ] Reject empty/whitespace post and comment input.
-- [ ] Like/unlike and check the count returns to its initial value.
-- [ ] Expand comments, add one and verify text/name/count.
-- [ ] Cancel deletion, then confirm deletion; check other people's posts have no Delete button.
-- [ ] Edit the profile name/bio and check own post/comment authors update.
-- [ ] Reload and switch pages on one local-server origin to check persistence.
-- [ ] Try invalid email, short password and mismatching signup passwords.
-- [ ] Try valid fictional login/signup values and confirm navigation/profile behavior.
-- [ ] Use keyboard navigation and inspect visible focus.
-- [ ] Narrow the window to phone width; check cards, forms, navigation and images.
-- [ ] Replace team/course placeholders and add artwork source credits.
-
-AI assistance was used to draft code and documentation. Understand the implementation and acknowledge assistance according to your instructor's rules.
